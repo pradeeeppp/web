@@ -1,244 +1,412 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Pradeep Bolleddu — Applied AI engineer working on reliable AI agents, machine learning systems, and research-driven applications.">
-  <title>Pradeep Bolleddu — Applied AI Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      color-scheme: light;
-      --ink: #202b3a;
-      --body: #465366;
-      --muted: #758092;
-      --accent: #345b80;
-      --accent-hover: #223f60;
-      --line: #e5eaf0;
-      --soft: #f5f7fa;
-      --white: #ffffff;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
-    body { margin: 0; background: var(--white); color: var(--body); font: 400 15px/1.85 "Manrope", system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
-    img { display: block; max-width: 100%; }
-    a { color: var(--accent); text-decoration: none; text-underline-offset: 3px; }
-    a:hover { color: var(--accent-hover); text-decoration: underline; }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
-    h1,h2,h3,p,ul { margin-top: 0; }
-    h1,h2,h3 { color: var(--ink); line-height: 1.35; }
-    .shell { width: min(1040px, calc(100% - 64px)); margin: 0 auto; }
-    .site-header { border-bottom: 1px solid var(--line); }
-    .header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .wordmark { font-weight: 800; font-size: 17px; letter-spacing: -.045em; color: var(--ink); white-space: nowrap; }
-    .wordmark:hover { color: var(--ink); text-decoration: none; }
-    .main-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 27px; }
-    .main-nav a { color: var(--body); font-size: 13px; font-weight: 600; }
-    .main-nav a:hover { color: var(--ink); }
-    .page-layout { display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: clamp(40px, 7vw, 96px); align-items: start; padding-top: 54px; padding-bottom: 72px; }
-    .sidebar { min-width: 0; }
-    .portrait { width: 236px; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; border-radius: 9px; background: var(--soft); }
-    .side-links { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 7px 16px; font-size: 13px; font-weight: 700; }
-    .side-links a { color: var(--ink); }
-    .side-links a:hover { color: var(--accent); }
-    .research-link { display: block; border: 1px solid var(--line); border-radius: 8px; margin-top: 25px; padding: 14px 16px; color: var(--ink); font-weight: 700; font-size: 13px; line-height: 1.5; }
-    .research-link:hover { text-decoration: none; border-color: #cad4df; background: var(--soft); }
-    .research-link span { display: block; font-weight: 500; font-size: 12px; color: var(--muted); margin-top: 3px; }
-    .sidebar-title { margin: 43px 0 13px; color: var(--ink); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
-    .interests { margin: 0; padding: 0; list-style: none; }
-    .interests li { padding: 13px 0; border-top: 1px solid var(--line); }
-    .interests strong { display: block; color: var(--ink); font-weight: 700; font-size: 13px; line-height: 1.6; }
-    .interests small { display: block; font-size: 12px; line-height: 1.7; color: var(--muted); margin-top: 3px; }
-    .content { min-width: 0; }
-    .eyebrow { margin: 4px 0 10px; color: var(--accent); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .15em; }
-    .hero h1 { font-size: clamp(32px, 4vw, 47px); font-weight: 800; letter-spacing: -.065em; margin: 0 0 9px; }
-    .tagline { margin-bottom: 28px; font-size: 17px; line-height: 1.65; font-weight: 500; color: #536276; max-width: 580px; }
-    .section { margin-top: 48px; }
-    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin: 0 0 20px; }
-    .section-heading h2 { font-size: 18px; font-weight: 800; letter-spacing: -.035em; margin: 0; }
-    .section-heading .detail { color: var(--muted); font-size: 12px; }
-    .bio p { margin-bottom: 17px; font-size: 14px; line-height: 1.95; }
-    .bio p:last-child { margin-bottom: 0; }
-    .bio strong { color: var(--ink); font-weight: 700; }
-    .subtle-list { margin: 0; padding-left: 18px; }
-    .subtle-list li { padding-left: 5px; margin-bottom: 10px; font-size: 14px; }
-    .subtle-list li::marker { color: #a8b5c5; }
-    .articles { display: grid; }
-    .article-row { display: flex; align-items: start; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
-    .article-row:first-child { padding-top: 1px; }
-    .article-row:last-child { border-bottom: 0; }
-    .article-row h3 { font-weight: 600; font-size: 14px; line-height: 1.7; margin: 0; }
-    .link-label { flex: 0 0 auto; display: inline-flex; align-items: center; padding: 3px 10px; border: 1px solid var(--line); border-radius: 5px; color: var(--accent); font-size: 11px; font-weight: 800; line-height: 1.7; }
-    .link-label:hover { border-color: #bfd0df; text-decoration: none; }
-    .publications { display: grid; }
-    .publication { display: grid; grid-template-columns: 105px minmax(0, 1fr); align-items: start; gap: 19px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-    .publication:first-child { padding-top: 1px; }
-    .publication:last-child { border-bottom: 0; }
-    .publication img { width: 105px; height: 82px; object-fit: contain; border: 1px solid var(--line); border-radius: 5px; background: #fbfcfd; }
-    .publication h3 { font-size: 14px; font-weight: 700; line-height: 1.6; letter-spacing: -.012em; margin: 0 0 6px; }
-    .publication h3 a { color: var(--ink); }
-    .publication h3 a:hover { color: var(--accent); }
-    .pub-meta { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 0 0 5px; }
-    .pub-links { display: flex; gap: 13px; font-size: 12px; font-weight: 800; margin: 7px 0 0; }
-    .pub-label { display: grid; place-items: center; width: 105px; height: 82px; border-radius: 5px; border: 1px solid var(--line); background: var(--soft); color: #617188; font-size: 15px; font-weight: 800; letter-spacing: -.04em; }
-    .competencies { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
-    .competency { padding: 16px 0; border-bottom: 1px solid var(--line); }
-    .competency h3 { font-size: 13px; font-weight: 800; margin-bottom: 6px; }
-    .competency p { font-size: 12px; line-height: 1.8; margin: 0; color: var(--muted); }
-    .contact-section p { font-size: 14px; margin: 0; }
-    .footer { padding: 24px 0 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    @media (max-width: 760px) {
-      .shell { width: min(100% - 36px, 580px); }
-      .header-inner { min-height: 72px; flex-wrap: wrap; justify-content: center; gap: 6px 24px; padding: 15px 0; }
-      .main-nav { justify-content: center; gap: 8px 19px; }
-      .page-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-top: 30px; }
-      .sidebar { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 8px 20px; align-items: start; }
-      .portrait { width: 116px; aspect-ratio: 4 / 5; grid-row: span 2; }
-      .side-links { margin-top: 3px; align-self: end; gap: 5px 13px; }
-      .research-link { margin-top: 3px; padding: 10px 12px; }
-      .sidebar-title, .interests { display: none; }
-      .hero h1 { font-size: 35px; }
-      .tagline { margin-bottom: 17px; font-size: 15px; }
-      .section { margin-top: 39px; }
-      .publication { grid-template-columns: 90px minmax(0, 1fr); gap: 14px; }
-      .publication img, .pub-label { width: 90px; height: 75px; }
-    }
-    @media (max-width: 440px) {
-      .competencies { grid-template-columns: 1fr; }
-      .article-row { gap: 12px; }
-      .main-nav a { font-size: 12px; }
-      .bio p { font-size: 13.5px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pradeep Bolleddu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=EB+Garamond:wght@600&family=Merriweather:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base styles from original CSS, adjusted to work with Tailwind */
+        html, body {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            line-height: 1.45;
+            color: #111;
+            background: #fff;
+        }
+        .font-name {
+            font-family: 'Merriweather', serif;
+        }
+        .bio p {
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Tooltip styles */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip-container .tooltip-text {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 8px;
+            position: absolute;
+            z-index: 10;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            font-family: 'Lato', sans-serif; 
+            font-size: 13px;
+        }
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .tooltip-container .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        /* D3 Graph specific styles */
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+
+        .node-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 10px;
+            pointer-events: none;
+            text-shadow: 0 0 4px white;
+            fill: #333;
+            font-weight: 600;
+        }
+
+        .domain-node {
+            stroke: #374151;
+            stroke-width: 2px;
+        }
+    </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="wordmark" href="./index.html" aria-label="Pradeep Bolleddu homepage">Pradeep Bolleddu</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#articles">Work</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <div class="shell page-layout">
-    <aside class="sidebar" aria-label="Profile and research interests">
-      <img class="portrait" src="./assests/website%20photo.jpg" width="472" height="590" alt="Portrait of Pradeep Bolleddu">
-      <div class="side-links">
-        <a href="https://www.linkedin.com/in/pradeep-bolleddu-4745991b2/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/bolleddu15" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="./Notes/Notes.html">Notes ↗</a>
-      </div>
-      <a class="research-link" href="./research/index.html">Explore research projects →
-        <span>AI, computer vision, and data engineering</span>
-      </a>
-      <h2 class="sidebar-title">Research interests</h2>
-      <ul class="interests">
-        <li><strong>Reinforcement Learning</strong><small>Multi-agent systems, AI agents, and agentic solutions.</small></li>
-        <li><strong>Computer Vision &amp; Multimodal AI</strong><small>Multimedia systems and vision-language models.</small></li>
-        <li><strong>Large Language Models</strong><small>Alignment, pre-training, and AI safety.</small></li>
-      </ul>
-    </aside>
+<body class="bg-surface text-text font-body">
+    <header class="bg-white border-b border-gray-200">
+        <div class="relative flex items-center justify-center py-3 px-4 sm:px-6 max-w-5xl mx-auto">
+            <h1 class="text-3xl font-name font-bold tracking-tight text-center">Pradeep Bolleddu</h1>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 max-w-5xl my-7 md:my-10 grid grid-cols-1 md:grid-cols-[220px_1fr] lg:grid-cols-[250px_1fr] gap-6 items-start">
+        
+        <aside class="flex flex-col items-center justify-start gap-3">
+            <img class="w-48 h-64 md:w-56 md:h-72 object-cover rounded-xl shadow-lg transition-transform hover:scale-105" src="https://raw.githubusercontent.com/bolledduu/web/main/assests/website%20photo.jpg" alt="Pradeep Bolleddu" />
+            
+            <nav class="flex justify-center gap-4 mt-2 text-xl" aria-label="Social links">
+                <a class="text-teal-700 hover:text-teal-900 transition-colors tooltip-container" href="https://www.linkedin.com/in/pradeep-bolleddu-4745991b2/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="tooltip-text">LinkedIn</span>
+                </a>
+                <a class="text-gray-700 hover:text-black hover:underline transition-colors tooltip-container" href="https://github.com/bolleddu15" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip-text">GitHub</span>
+                </a>
+            </nav>
 
-    <main class="content">
-      <div class="hero">
-        <p class="eyebrow">Applied AI Engineer · Research</p>
-        <h1>Pradeep Bolleddu</h1>
-        <p class="tagline">Building reliable, research-driven AI systems and intelligent agents.</p>
-      </div>
+            <p class="mt-2 w-full text-center">
+                <a href="https://bolledduu.github.io/web/Notes/Notes.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors font-bold italic text-sm">
+                    Read My Notes &rarr;
+                </a>
+            </p>
 
-      <section id="about" class="section bio" aria-labelledby="about-title">
-        <div class="section-heading"><h2 id="about-title">About</h2></div>
-        <p >
-                    <span >I’m <strong>Pradeep Bolleddu</strong>, an Applied AI Engineer at <a  href="https://www.compfly.ai/" target="_blank" rel="noopener">CompFly AI</a>,</span> building scalable MLSecOps platforms and secure governance workflows for production AI agents. Previously, as an Applied Scientist at Oliv AI, I engineered large-scale LLM classification and RAG conversational systems to automate customer workflows. By connecting agents with real-time monitoring, I study how best to track evidence and decisions for recursive agentic systems and whether durable memory improves agentic assisted scientific discoveries. I currently reside in California.
+            <div class="mt-4 w-full p-0 bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl">
+                <img class="w-full h-32 object-cover rounded-t-xl" 
+                     src="https://raw.githubusercontent.com/bolledduu/web/main/assests/research%20matters.png" 
+                     alt="Research Blogs Thumbnail" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x128/f0fdf4/16a34a?text=Research+Topics';"/>
+                
+                <div class="p-4 flex flex-col items-center">
+                    <h3 class="text-lg font-bold text-gray-800">Research Insights</h3>
+                    <p class="text-xs text-gray-500 mb-3">Deep dives into AI, CV, and ML systems.</p>
+                    <a href="./research/index.html" class="w-full block py-2 bg-teal-600 text-white font-semibold text-center rounded-lg shadow-md hover:bg-teal-700 transition-colors">
+                        Technical Projects
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-4 w-full">
+                <h3 class="text-lg font-bold text-gray-800 text-center mb-3">Research Interests</h3>
+                <div class="space-y-3">
+                    <div class="p-3 bg-teal-50 border border-teal-200 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-teal-800 text-sm">Reinforcement Learning</h4>
+                        <p class="text-xs text-teal-700 mt-1">Multi-agent Systems, AI Agents, & Agentic Solutions.</p>
+                    </div>
+                    <div class="p-3 bg-orange-50 border border-orange-200 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-orange-800 text-sm">Computer Vision & Multimodal AI</h4>
+                        <p class="text-xs text-orange-700 mt-1">Multimedia Systems & Vision-Language Models.</p>
+                    </div>
+                    <div class="p-3 bg-sky-50 border border-sky-200 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-sky-800 text-sm">Large Language Models (LLMs)</h4>
+                        <p class="text-xs text-sky-700 mt-1">Alignment, Pre-training, & AI Safety.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section>
+            <section class="bio mb-8 text-gray-800">
+                <p class="mb-4">
+                    <span class="italic">I’m <strong>Pradeep Bolleddu</strong>, an Applied AI Engineer at <a class="text-orange-600 hover:text-orange-800 hover:underline font-medium" href="https://www.compfly.ai/" target="_blank" rel="noopener">CompFly AI</a>,</span> building scalable MLSecOps platforms and secure governance workflows for production AI agents. Previously, as an Applied Scientist at Oliv AI, I engineered large-scale LLM classification and RAG conversational systems to automate customer workflows. By connecting agents with real-time monitoring, I study how best to track evidence and decisions for recursive agentic systems and whether durable memory improves agentic assisted scientific discoveries. I currently reside in California.
                 </p>
                 
                 <p>
-                    <span >My academic background includes</span> a Master's in Data Science from the University of Massachusetts, where I focused on healthcare generative models with <a  href="https://www.umassmed.edu/fanglab/members/julia-hua-fang-biography/" target="_blank">Prof. Julia Fang</a> and high-performance computing with <a  href="http://www.math.umassd.edu/~sfield/?_gl=1*ww1s8d*_gcl_au*Njg2NDk5OTAzLjE3MzYxODc5Mjg." target="_blank">Prof. Scott Field</a> at the <a  href="https://www.cscdr.umassd.edu/" target="_blank">CSCDR Lab</a>. Prior to that, I completed my bachelor’s at IIT Ropar, collaborating with <a  href="https://mech.iitrpr.ac.in/faculty/ekta-singla" target="_blank">Dr. Ekta Singla</a> on an <a  href="https://www.indiascienceandtechnology.gov.in/node/123808" target="_blank">Autonomous WardBot</a>. <span >I am dedicated to turning research insights into robust, production-grade AI applications.</span>
+                    <span class="italic">My academic background includes</span> a Master's in Data Science from the University of Massachusetts, where I focused on healthcare generative models with <a class="text-orange-600 hover:text-orange-800 hover:underline font-medium" href="https://www.umassmed.edu/fanglab/members/julia-hua-fang-biography/" target="_blank">Prof. Julia Fang</a> and high-performance computing with <a class="text-orange-600 hover:text-orange-800 hover:underline font-medium" href="http://www.math.umassd.edu/~sfield/?_gl=1*ww1s8d*_gcl_au*Njg2NDk5OTAzLjE3MzYxODc5Mjg." target="_blank">Prof. Scott Field</a> at the <a class="text-orange-600 hover:text-orange-800 hover:underline font-medium" href="https://www.cscdr.umassd.edu/" target="_blank">CSCDR Lab</a>. Prior to that, I completed my bachelor’s at IIT Ropar, collaborating with <a class="text-orange-600 hover:text-orange-800 hover:underline font-medium" href="https://mech.iitrpr.ac.in/faculty/ekta-singla" target="_blank">Dr. Ekta Singla</a> on an <a class="text-orange-600 hover:text-orange-800 hover:underline font-medium" href="https://www.indiascienceandtechnology.gov.in/node/123808" target="_blank">Autonomous WardBot</a>. <span class="italic">I am dedicated to turning research insights into robust, production-grade AI applications.</span>
                 </p>
-      </section>
+            </section>
+            
+            <section class="qualifications mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2">Qualifications Summary</h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-800">
+                    <li>Memory systems and observability for long-running, self-improving research agents.</li>
+                    <li>Multi-agent orchestration and AI for Science systems.</li>
+                    <li>Multimodal AI applications for scientific workflows and physical-world experiments.</li>
+                    <li>Project supervision across reasoning, scientific representation learning, and learning tools.</li>
+                    <li>Experience building deployed AI products, research prototypes, and learning platforms.</li>
+                </ul>
+            </section>
 
-      <section class="section" aria-labelledby="focus-title">
-        <div class="section-heading"><h2 id="focus-title">What I work on</h2></div>
-        <ul class="subtle-list">
-          <li>Memory systems and observability for long-running, self-improving research agents.</li>
-          <li>Multi-agent orchestration and AI for Science systems.</li>
-          <li>Multimodal AI applications for scientific workflows and physical-world experiments.</li>
-          <li>Project supervision across reasoning, scientific representation learning, and learning tools.</li>
-          <li>Experience building deployed AI products, research prototypes, and learning platforms.</li>
-        </ul>
-      </section>
+            <section class="mb-8">
+                <div class="news">
+                    <h2 class="text-lg font-bold mb-2">Project Articles</h2>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2 text-gray-700">
+                            Multi-Agent Reinforcement Learning for Real-Time Dynamic Production Scheduling in a Robot Assembly Cell
+                            <small class="text-sm ml-2">
+                                <a class="text-orange-600 hover:text-orange-800 hover:underline font-semibold" href="./assests/Multiagent.pdf" target="_blank" rel="noopener">pdf</a>
+                            </small>
+                        </li>
+                        <li class="mb-2 text-gray-700">
+                            Dialogue Diplomats: An End-to-End Multi-Agent RL System for Automated Conflict Resolution and Consensus Building
+                            <small class="text-sm ml-2">
+                                <a class="text-orange-600 hover:text-orange-800 hover:underline font-semibold" href="./assests/dialogue_diplamatic.pdf" target="_blank" rel="noopener">pdf</a>
+                            </small>
+                        </li>
+                        <li class="mb-2 text-gray-700">
+                            CodeCrew RL: End-to-End Collaborative LLM Agents for Automated Software Development, Testing, and Integration
+                            <small class="text-sm ml-2">
+                                <a class="text-orange-600 hover:text-orange-800 hover:underline font-semibold" href="./assests/CodeCrew_RL.pdf" target="_blank" rel="noopener">pdf</a>
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-      <section id="articles" class="section" aria-labelledby="articles-title">
-        <div class="section-heading"><h2 id="articles-title">Project articles</h2><span class="detail">Selected writing</span></div>
-        <div class="articles">
-          <article class="article-row"><h3>Multi-Agent Reinforcement Learning for Real-Time Dynamic Production Scheduling in a Robot Assembly Cell</h3><a class="link-label" href="./assests/Multiagent.pdf" target="_blank" rel="noopener noreferrer" aria-label="PDF: Multi-Agent Reinforcement Learning">PDF ↗</a></article>
-          <article class="article-row"><h3>Dialogue Diplomats: An End-to-End Multi-Agent RL System for Automated Conflict Resolution and Consensus Building</h3><a class="link-label" href="./assests/dialogue_diplamatic.pdf" target="_blank" rel="noopener noreferrer" aria-label="PDF: Dialogue Diplomats">PDF ↗</a></article>
-          <article class="article-row"><h3>CodeCrew RL: End-to-End Collaborative LLM Agents for Automated Software Development, Testing, and Integration</h3><a class="link-label" href="./assests/CodeCrew_RL.pdf" target="_blank" rel="noopener noreferrer" aria-label="PDF: CodeCrew RL">PDF ↗</a></article>
-        </div>
-      </section>
+            <section class="selected-publications mb-8">
+                <h2 class="text-xl font-bold mb-4">Selected Publications</h2>
 
-      <section id="publications" class="section" aria-labelledby="publications-title">
-        <div class="section-heading"><h2 id="publications-title">Selected publications</h2></div>
-        <div class="publications">
-          <article class="publication">
-            <a href="./assests/CCAS_camera_ready.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read Trustworthy Evidence Integration PDF"><img src="./assests/Causal%20Safety%20in%20Clinical%20AI%20Workflows%20(2).png" loading="lazy" alt="Causal safety in clinical AI workflows"></a>
-            <div><h3><a href="./assests/CCAS_camera_ready.pdf" target="_blank" rel="noopener noreferrer">Trustworthy Evidence Integration in Clinical Multi-Agent Systems: Causal Steering Against Harmful Tool Actions</a></h3><p class="pub-meta">WACV Fabric workshop</p><p class="pub-links"><a href="./assests/CCAS_camera_ready.pdf" target="_blank" rel="noopener noreferrer">PDF ↗</a></p></div>
-          </article>
-          <article class="publication">
-            <a href="./assests/16_Toward_Reliable_Visible_Tra%20(1).pdf" target="_blank" rel="noopener noreferrer" aria-label="Read visible-track speaking-state detection PDF"><img src="./assests/main_arch.png" loading="lazy" alt="Video restoration and speaking-state detection architecture"></a>
-            <div><h3><a href="./assests/16_Toward_Reliable_Visible_Tra%20(1).pdf" target="_blank" rel="noopener noreferrer">Toward Reliable Visible-Track Speaking-State Detection Under Video Restoration</a></h3><p class="pub-meta">WACV 2027 Workshop WVAQ Submission</p><p class="pub-meta">Submitted <time datetime="2026-10-13">13 Oct 2026</time> · Modified <time datetime="2026-10-20">20 Oct 2026</time></p><p class="pub-links"><a href="./assests/16_Toward_Reliable_Visible_Tra%20(1).pdf" target="_blank" rel="noopener noreferrer">PDF ↗</a></p></div>
-          </article>
-          <article class="publication">
-            <a href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener noreferrer" aria-label="Read An Analysis of Clustering Techniques"><img src="./assests/clustering.webp" loading="lazy" alt="Clustering techniques visualization"></a>
-            <div><h3><a href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener noreferrer">An Analysis of Clustering Techniques</a></h3><p class="pub-meta">Pradeep Bolleddu · Volume 8, Issue 2 · pp. 52–57</p><p class="pub-links"><a href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener noreferrer">Project page ↗</a><a href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener noreferrer">PDF ↗</a></p></div>
-          </article>
-          <article class="publication">
-            <a href="https://www.researchgate.net/publication/385832357_HADOOP_System_An_Overview_of_Data_Security" target="_blank" rel="noopener noreferrer" aria-label="Read Hadoop An Overview of Data Security"><img src="./assests/haddop.png" loading="lazy" alt="Hadoop data security visualization"></a>
-            <div><h3><a href="https://www.researchgate.net/publication/385832357_HADOOP_System_An_Overview_of_Data_Security" target="_blank" rel="noopener noreferrer">Hadoop An Overview of Data Security</a></h3><p class="pub-meta">Pradeep Bolleddu · Vol. 11, Issue 3 · March 2022</p><p class="pub-links"><a href="https://www.researchgate.net/publication/385832357_HADOOP_System_An_Overview_of_Data_Security" target="_blank" rel="noopener noreferrer">Project page ↗</a><a href="./assests/hadoop%20paper.pdf" target="_blank" rel="noopener noreferrer">PDF ↗</a></p></div>
-          </article>
-          <article class="publication">
-            <a href="https://openreview.net/forum?id=NIwL22qGYy" target="_blank" rel="noopener noreferrer" aria-label="Read foundation model internal interventions survey"><span class="pub-label">TMLR</span></a>
-            <div><h3><a href="https://openreview.net/forum?id=NIwL22qGYy" target="_blank" rel="noopener noreferrer">Controlling Foundation Models via Internal Interventions: A Survey of Inference-Time Methods</a></h3><p class="pub-meta">Pradeep Bolleddu · TMLR 2026</p><p class="pub-links"><a href="https://openreview.net/forum?id=NIwL22qGYy" target="_blank" rel="noopener noreferrer">OpenReview ↗</a></p></div>
-          </article>
-          <article class="publication">
-            <div class="pub-label" role="img" aria-label="KDD publication thumbnail">KDD</div>
-            <div><h3>Beyond Preference Matching: Towards Need-Aware Personalized Large Language Models</h3><p class="pub-meta">Pradeep Bolleddu · KDD 2026</p></div>
-          </article>
-        </div>
-      </section>
+                <article id="trustworthy-evidence-integration" class="flex flex-col sm:flex-row gap-4 items-start mb-5">
+                    <a href="./assests/CCAS_camera_ready.pdf" target="_blank" rel="noopener" class="shrink-0" aria-label="Read Causal safety in clinical AI workflows paper (PDF)">
+                        <img src="./assests/Causal%20Safety%20in%20Clinical%20AI%20Workflows%20(2).png" alt="Causal safety in clinical AI workflows" class="w-32 h-auto object-contain rounded-md shadow-sm" style="width:128px;height:auto" loading="lazy" />
+                    </a>
+                    <div class="min-w-0 flex-1">
+                        <h3 class="text-teal-600 font-bold leading-tight"><a href="./assests/CCAS_camera_ready.pdf" target="_blank" rel="noopener" class="hover:underline">Trustworthy Evidence Integration in Clinical Multi-Agent Systems: Causal Steering Against Harmful Tool Actions</a></h3>
+                    <p class="text-xs text-gray-600 italic mt-1">WACV Fabric workshop</p>
+                        <p class="text-xs mt-2"><a href="./assests/CCAS_camera_ready.pdf" target="_blank" rel="noopener" class="text-orange-600 hover:text-orange-800 hover:underline font-semibold">PDF</a></p>
+                    </div>
+                </article>
 
-      <section class="section" aria-labelledby="competencies-title">
-        <div class="section-heading"><h2 id="competencies-title">Core AI competencies</h2></div>
-        <div class="competencies">
-          <div class="competency"><h3>Deep Learning</h3><p>CNNs, recurrent networks, attention, autoencoders</p></div>
-          <div class="competency"><h3>Computer Vision</h3><p>Detection, multi-view geometry, point clouds, segmentation, OpenCV</p></div>
-          <div class="competency"><h3>Generative AI</h3><p>Diffusion, GANs, NeRF, CLIP, image generation</p></div>
-          <div class="competency"><h3>Large Language Models</h3><p>Transformers, RAG, fine-tuning, vector databases</p></div>
-          <div class="competency"><h3>Machine Learning</h3><p>XGBoost, random forests, Bayesian optimization, clustering</p></div>
-        </div>
-      </section>
+                <article id="visible-track-speaking-state" class="flex flex-col sm:flex-row gap-4 items-start mb-5">
+                    <a href="./assests/16_Toward_Reliable_Visible_Tra%20(1).pdf" target="_blank" rel="noopener" class="shrink-0" aria-label="Read Video restoration and speaking-state detection architecture paper (PDF)">
+                        <img src="./assests/main_arch.png" alt="Video restoration and speaking-state detection architecture" class="w-32 h-auto object-contain rounded-md shadow-sm" style="width:128px;height:auto" loading="lazy" />
+                    </a>
+                    <div class="min-w-0 flex-1">
+                        <h3 class="text-teal-600 font-bold leading-tight"><a href="./assests/16_Toward_Reliable_Visible_Tra%20(1).pdf" target="_blank" rel="noopener" class="hover:underline">Toward Reliable Visible-Track Speaking-State Detection Under Video Restoration</a></h3>
+                    <p class="text-xs text-gray-600 italic mt-1">WACV 2027 Workshop WVAQ Submission</p>
+                    <p class="text-xs text-gray-500 mt-1">Submitted <time datetime="2026-10-13">13 Oct 2026</time> · Modified <time datetime="2026-10-20">20 Oct 2026</time></p>
+                        <p class="text-xs mt-2"><a href="./assests/16_Toward_Reliable_Visible_Tra%20(1).pdf" target="_blank" rel="noopener" class="text-orange-600 hover:text-orange-800 hover:underline font-semibold">PDF</a></p>
+                    </div>
+                </article>
+                
+                <div class="flex gap-4 mb-5 items-start">
+                    <img class="w-32 h-auto object-cover rounded-md shadow-sm" src="https://raw.githubusercontent.com/bolledduu/web/main/assests/clustering.webp" alt="publication thumbnail" />
+                    <div class="flex flex-col">
+                        <div class="flex flex-wrap items-baseline gap-x-2">
+                            <a class="text-teal-600 hover:text-teal-800 hover:underline font-bold leading-tight" href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener">An Analysis of Clustering Techniques</a>
+                            <span class="text-xs text-gray-600 italic"><strong>Pradeep Bolleddu</strong>, ... — Volume 8, Issue 2 (Pg: 52-57) &nbsp;|&nbsp; <a class="text-orange-600 hover:text-orange-800 hover:underline" href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener">project page</a> | <a class="text-orange-600 hover:text-orange-800 hover:underline" href="https://www.academia.edu/82398319/An_Analysis_of_Clustering_Techniques" target="_blank" rel="noopener">pdf</a></span>
+                        </div>
+                    </div>
+                </div>
 
-      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-        <div class="section-heading"><h2 id="contact-title">Get in touch</h2></div>
-        <p>Interested in collaborating? <a href="mailto:b.bolleddupradeep@gmail.com">b.bolleddupradeep@gmail.com</a></p>
-      </section>
+                <div class="flex gap-4 mb-5 items-start">
+                    <img class="w-32 h-auto object-cover rounded-md shadow-sm" src="https://raw.githubusercontent.com/bolledduu/web/main/assests/haddop.png" alt="publication thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/256x192/f0f0f0/333?text=Hadoop+Pub';" />
+                    <div class="flex flex-col">
+                        <div class="flex flex-wrap items-baseline gap-x-2">
+                            <a class="text-teal-600 hover:text-teal-800 hover:underline font-bold leading-tight" href="https://www.researchgate.net/publication/385832357_HADOOP_System_An_Overview_of_Data_Security" target="_blank" rel="noopener">Hadoop An Overview of Data Security</a>
+                            <span class="text-xs text-gray-600 italic"><strong>Pradeep Bolleddu*</strong> — Vol. 11 & Issue 3, March 2022 &nbsp;|&nbsp; <a class="text-orange-600 hover:text-orange-800 hover:underline" href="https://www.researchgate.net/publication/385832357_HADOOP_System_An_Overview_of_Data_Security" target="_blank" rel="noopener">project page</a> | <a class="text-orange-600 hover:text-orange-800 hover:underline" href="./assests/hadoop%20paper.pdf" target="_blank" rel="noopener">pdf</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mb-5 items-start">
+                    <img class="w-32 h-auto object-cover rounded-md shadow-sm" src="https://www.preprints.org/frontend/picture/ms_xml/manuscript/ac4a3fb07ef438e5162f84f3e4782c1a/preprints-213725-g008.png" alt="TMLR Publication thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/256x192/eef2ff/4f46e5?text=TMLR+2026';" />
+                    <div class="flex flex-col">
+                        <div class="flex flex-wrap items-baseline gap-x-2">
+                            <a class="text-teal-600 hover:text-teal-800 hover:underline font-bold leading-tight" href="https://openreview.net/forum?id=NIwL22qGYy" target="_blank" rel="noopener">Controlling Foundation Models via Internal Interventions: A Survey of Inference-Time Methods</a>
+                            <span class="text-xs text-gray-600 italic"><strong>Pradeep Bolleddu</strong>, ... — TMLR 2026 &nbsp;|&nbsp; <a class="text-orange-600 hover:text-orange-800 hover:underline" href="https://openreview.net/forum?id=NIwL22qGYy" target="_blank" rel="noopener">OpenReview</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mb-5 items-start">
+                    <svg class="w-32 h-auto shrink-0 rounded-md shadow-sm" style="width:128px;flex-shrink:0" viewBox="0 0 256 192" role="img" aria-labelledby="kdd-thumbnail-title" xmlns="http://www.w3.org/2000/svg">
+                        <title id="kdd-thumbnail-title">KDD 2026 — Need-Aware Personalized Large Language Models</title>
+                        <rect width="256" height="192" rx="12" fill="#f0fdfa"/>
+                        <rect x="20" y="24" width="36" height="4" rx="2" fill="#0d9488"/>
+                        <text x="20" y="64" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#115e59">KDD 2026</text>
+                        <text x="20" y="104" font-family="Arial, sans-serif" font-size="20" fill="#134e4a">Need-Aware</text>
+                        <text x="20" y="132" font-family="Arial, sans-serif" font-size="20" fill="#134e4a">Personalized LLMs</text>
+                    </svg>
+                    <div class="flex flex-col">
+                        <div class="flex flex-wrap items-baseline gap-x-2">
+                            <span class="text-teal-600 font-bold leading-tight">Beyond Preference Matching: Towards Need-Aware Personalized Large Language Models</span>
+                            <span class="text-xs text-gray-600 italic"><strong>Pradeep Bolleddu</strong>, ... — KDD 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="knowledge-graph mb-8" aria-labelledby="knowledge-heading">
+                <h2 id="knowledge-heading" class="text-xl font-bold mb-4">Pradeep's Core AI Competencies</h2>
+                <div class="p-4 rounded-xl bg-gradient-to-br from-emerald-50/50 to-white border-2 border-dashed border-emerald-300 shadow-lg">
+                    <p class="text-sm text-gray-600 mb-3">Drag the central domain nodes (larger circles) or the algorithm nodes to interact with the graph.</p>
+                    <div id="knowledge-graph-container" class="w-full" style="height: 350px;">
+                        <svg id="knowledge-graph-svg" class="w-full h-full"></svg>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-cta mb-8">
+                <p>If you'd like to collaborate, email me at <a class="text-orange-600 hover:text-orange-800 hover:underline" href="mailto:b.bolleddupradeep@gmail.com">b.bolleddupradeep@gmail.com</a>.</p>
+            </section>
+        </section>
     </main>
-  </div>
+    <footer class="text-center py-4 text-sm text-gray-500 border-t border-gray-200">
+        © <span id="year"></span>
+    </footer>
 
-  <footer class="footer">
-    <div class="shell footer-inner"><span>© <span id="year">2026</span> Pradeep Bolleddu</span><span>Built with care, kept simple.</span></div>
-  </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- D3.js INTERACTIVE KNOWLEDGE GRAPH ---
+
+        function createKnowledgeGraph() {
+            const container = document.getElementById('knowledge-graph-container');
+            if (!container) return;
+            const svg = d3.select("#knowledge-graph-svg");
+            
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            svg.attr("viewBox", [0, 0, width, height]);
+
+            const graphData = {
+                nodes: [
+                    { id: "DL", group: 1, type: "domain", label: "Deep Learning" },
+                    { id: "CV", group: 2, type: "domain", label: "Computer Vision" },
+                    { id: "GEN AI", group: 3, type: "domain", label: "Generative AI" },
+                    { id: "LLMs", group: 4, type: "domain", label: "LLMs" },
+                    { id: "ML", group: 5, type: "domain", label: "Machine Learning" },
+                    { id: "CNNs", group: 1, type: "concept", label: "CNNs" },
+                    { id: "RNN/LSTM", group: 1, type: "concept", label: "RNN/LSTM" },
+                    { id: "GRUs", group: 1, type: "concept", label: "GRUs" },
+                    { id: "Attention", group: 1, type: "concept", label: "Attention" },
+                    { id: "Autoencoders", group: 1, type: "concept", label: "Autoencoders" },
+                    { id: "YOLO/R-CNN", group: 2, type: "concept", label: "YOLO/R-CNN" },
+                    { id: "3D Multi-view", group: 2, type: "concept", label: "3D Multi-view" },
+                    { id: "Point Clouds", group: 2, type: "concept", label: "Point Clouds" },
+                    { id: "OpenCV", group: 2, type: "concept", label: "OpenCV" },
+                    { id: "Keypoint Detect.", group: 2, type: "concept", label: "Keypoint Detect." },
+                    { id: "Image Segmentation", group: 2, type: "concept", label: "Image Segment." },
+                    { id: "SfM", group: 2, type: "concept", label: "SfM/SLAM" },
+                    { id: "VAEs", group: 3, type: "concept", label: "VAEs" },
+                    { id: "GANs", group: 3, type: "concept", label: "GANs" },
+                    { id: "Diffusion", group: 3, type: "concept", label: "Diffusion Models" },
+                    { id: "NeRF", group: 3, type: "concept", label: "NeRF" },
+                    { id: "CLIP", group: 3, type: "concept", label: "CLIP" },
+                    { id: "Txt-to-Image", group: 3, type: "concept", label: "Txt-to-Image" },
+                    { id: "Transformer", group: 4, type: "concept", label: "Transformer" },
+                    { id: "RAG", group: 4, type: "concept", label: "RAG Systems" },
+                    { id: "Fine-tuning", group: 4, type: "concept", label: "Fine-tuning" },
+                    { id: "Prompt Eng.", group: 4, type: "concept", label: "Prompt Eng." },
+                    { id: "Vector DBs", group: 4, type: "concept", label: "Vector DBs" },
+                    { id: "XGBoost", group: 5, type: "concept", label: "XGBoost" },
+                    { id: "Random Forest", group: 5, type: "concept", label: "Random Forest" },
+                    { id: "Bayesian Opt.", group: 5, type: "concept", label: "Bayesian Opt." },
+                    { id: "K-Means", group: 5, type: "concept", label: "K-Means" },
+                    { id: "DBSCAN", group: 5, type: "concept", label: "DBSCAN" },
+                    { id: "SVM/Ensembles", group: 5, type: "concept", label: "SVM/Ensembles" },
+                ],
+                links: [
+                    { source: "DL", target: "CNNs" }, { source: "DL", target: "RNN/LSTM" }, { source: "DL", target: "GRUs" }, { source: "DL", target: "Attention" }, { source: "DL", target: "Autoencoders" },
+                    { source: "CV", target: "YOLO/R-CNN" }, { source: "CV", target: "3D Multi-view" }, { source: "CV", target: "Point Clouds" }, { source: "CV", target: "OpenCV" }, { source: "CV", target: "Keypoint Detect." }, { source: "CV", target: "Image Segmentation" }, { source: "CV", target: "SfM" },
+                    { source: "VAEs", target: "GEN AI" }, { source: "GANs", target: "GEN AI" }, { source: "Diffusion", target: "GEN AI" }, { source: "NeRF", target: "GEN AI" }, { source: "CLIP", target: "GEN AI" }, { source: "Txt-to-Image", target: "GEN AI" },
+                    { source: "LLMs", target: "Transformer" }, { source: "LLMs", target: "RAG" }, { source: "LLMs", target: "Fine-tuning" }, { source: "LLMs", target: "Prompt Eng." }, { source: "LLMs", target: "Vector DBs" },
+                    { source: "ML", target: "XGBoost" }, { source: "ML", target: "Random Forest" }, { source: "ML", target: "Bayesian Opt." }, { source: "ML", target: "K-Means" }, { source: "ML", target: "DBSCAN" }, { source: "ML", target: "SVM/Ensembles" },
+                    { source: "ML", target: "DL" }, 
+                    { source: "DL", target: "Transformer" }, { source: "DL", target: "GANs" }, { source: "DL", target: "CNNs" }, { source: "CV", target: "NeRF" }, { source: "CV", target: "Image Segmentation" }, { source: "GEN AI", target: "Transformer" }, { source: "ML", target: "Bayesian Opt." },
+                    { source: "CNNs", target: "YOLO/R-CNN" }, { source: "Autoencoders", target: "VAEs" }, { source: "RAG", target: "Vector DBs" }, { source: "3D Multi-view", target: "SfM" }, { source: "XGBoost", target: "Random Forest" },
+                ]
+            };
+
+            const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+            const simulation = d3.forceSimulation(graphData.nodes)
+                .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(45).strength(0.6))
+                .force("charge", d3.forceManyBody().strength(-150))
+                .force("center", d3.forceCenter(width / 2, height / 2)) 
+                .force("x", d3.forceX().strength(0.08)) 
+                .force("y", d3.forceY().strength(0.08)); 
+            
+            svg.selectAll("*").remove();
+
+            const link = svg.append("g").attr("class", "links").selectAll("line").data(graphData.links).join("line").attr("class", "link");
+            const node = svg.append("g").attr("class", "nodes").selectAll("g").data(graphData.nodes).join("g").call(drag(simulation));
+            node.append("circle").attr("r", d => d.type === 'domain' ? 14 : 8).attr("fill", d => color(d.group)).attr("class", d => d.type === 'domain' ? 'domain-node' : 'concept-node');
+            node.append("text").attr("class", "node-text").attr("dy", d => d.type === 'domain' ? 2 : 4).attr("x", d => d.type === 'domain' ? 18 : 10).text(d => d.label);
+
+            simulation.on("tick", () => {
+                const radius = 15;
+                link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+                node.attr("transform", d => {
+                    d.x = Math.max(radius, Math.min(width - radius, d.x));
+                    d.y = Math.max(radius, Math.min(height - radius, d.y));
+                    return `translate(${d.x},${d.y})`;
+                });
+            });
+
+            function drag(simulation) {    
+                function dragstarted(event, d) { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; }
+                function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+                function dragended(event, d) { if (!event.active) simulation.alphaTarget(0); if (d.type === 'domain') { d.fx = d.x; d.fy = d.y; } else { d.fx = null; d.fy = null; } }
+                return d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended);
+            }
+        }
+
+        function debounce(func, timeout = 300) {
+            let timer;
+            return (...args) => {
+                clearTimeout(timer);
+                timer = setTimeout(() => { func.apply(this, args); }, timeout);
+            };
+        }
+
+        const debouncedResize = debounce(() => {
+            createKnowledgeGraph();
+        });
+
+        window.addEventListener('resize', debouncedResize);
+        window.onload = function() {
+            createKnowledgeGraph();
+        };
+    </script>
 </body>
 </html>
